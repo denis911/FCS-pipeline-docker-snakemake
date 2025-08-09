@@ -12,6 +12,9 @@ input file the pipeline performs the following steps:
 
 The pipeline relies on the `flowCore` R package for parsing FCS files.
 
+# Change log:
+1) Fixed docker image build creation and versions conflicts 
+
 # Your task:
 1) Make it work (build&run)
 2) Add the possibility to input channels.txt and use only channels with 1 in the last column of channels.txt
