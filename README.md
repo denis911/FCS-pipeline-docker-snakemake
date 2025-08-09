@@ -15,6 +15,10 @@ The pipeline relies on the `flowCore` R package for parsing FCS files.
 # Change log:
 1) Fixed docker image build creation and versions conflicts
 2) Snakemake - modified snakemake file to create directories 
+3) Working command to run a container is 
+```
+docker run --rm -v C:\tmp\fcs_cuni\rsetask_ver1:/data -w /data fcs_pipeline_09081 --cores 2
+```
 
 # Your task:
 1) Make it work (build&run)

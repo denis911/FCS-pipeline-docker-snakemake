@@ -1,0 +1,6 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: 6b1aa9282d34
+Building DAG of jobs...
+MissingRuleException:
+No rule to produce snakemake (if you use input functions make sure that they don't raise unexpected exceptions).
