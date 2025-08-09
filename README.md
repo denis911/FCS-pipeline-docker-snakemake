@@ -13,7 +13,8 @@ input file the pipeline performs the following steps:
 The pipeline relies on the `flowCore` R package for parsing FCS files.
 
 # Change log:
-1) Fixed docker image build creation and versions conflicts 
+1) Fixed docker image build creation and versions conflicts
+2) Snakemake - modified snakemake file to create directories 
 
 # Your task:
 1) Make it work (build&run)
