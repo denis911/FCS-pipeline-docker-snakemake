@@ -1,13 +1,16 @@
 name: fcs_pipeline
 channels:
-  - conda-forge
-  - bioconda
-  - defaults
+- conda-forge # Highest priority for general packages
+- bioconda # Second priority for bioinformatics packages
+- nodefaults # Explicitly removes the 'defaults' channel to prevent conflicts
 dependencies:
-  - python=3.11
-  - snakemake
-  - r-base=4.3
-  - r-flowcore
-  - r-ggplot2
-  - r-uwot
-  - r-optparse
+- python=3.11
+- snakemake
+- r-base=4.4 # Updated for compatibility with bioconductor-flowcore v2.18.0
+#- bioconductor-flowcore=2.18.0 # Corrected package name and pinned for reproducibility
+# 2.18.0--r44he5774e6_0 # seems to be the latest?
+- bioconductor-flowcore
+- r-ggplot2
+- r-uwot
+- r-optparse
+- mamba # Recommended for faster and more robust environment creation
