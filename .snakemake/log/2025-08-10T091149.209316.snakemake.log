@@ -1,0 +1,80 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: 8b7639b6d636
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count
+-----------  -------
+all                1
+process_fcs        4
+total              5
+
+Select jobs to execute...
+Execute 2 jobs...
+[Sun Aug 10 09:11:49 2025]
+localrule process_fcs:
+    input: data/raw/FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable.fcs, channels.txt
+    output: data/processed/FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable_umap_clust.fcs, plots/FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable.png
+    jobid: 4
+    reason: Set of input files has changed since last execution; Code has changed since last execution
+    wildcards: sample=FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable
+    resources: tmpdir=/tmp
+[Sun Aug 10 09:11:49 2025]
+localrule process_fcs:
+    input: data/raw/FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable.fcs, channels.txt
+    output: data/processed/FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable_umap_clust.fcs, plots/FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable.png
+    jobid: 2
+    reason: Set of input files has changed since last execution; Code has changed since last execution
+    wildcards: sample=FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable
+    resources: tmpdir=/tmp
+Select jobs to execute...
+RuleException:
+CalledProcessError in file "/data/Snakefile", line 25:
+Command 'set -euo pipefail;  Rscript "/data/scripts/process_fcs.R" -i "data/raw/FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable.fcs" -o "data/processed/FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable_umap_clust.fcs" -p "plots/FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable.png" -c "channels.txt"' returned non-zero exit status 1.
+[Sun Aug 10 09:11:53 2025]
+Error in rule process_fcs:
+    message: None
+    jobid: 4
+    input: data/raw/FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable.fcs, channels.txt
+    output: data/processed/FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable_umap_clust.fcs, plots/FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable.png
+    shell:
+        Rscript "/data/scripts/process_fcs.R" -i "data/raw/FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable.fcs" -o "data/processed/FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable_umap_clust.fcs" -p "plots/FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable.png" -c "channels.txt"
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/data/Snakefile", line 25:
+Command 'set -euo pipefail;  Rscript "/data/scripts/process_fcs.R" -i "data/raw/FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable.fcs" -o "data/processed/FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable_umap_clust.fcs" -p "plots/FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable.png" -c "channels.txt"' returned non-zero exit status 1.
+[Sun Aug 10 09:11:53 2025]
+Error in rule process_fcs:
+    message: None
+    jobid: 2
+    input: data/raw/FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable.fcs, channels.txt
+    output: data/processed/FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable_umap_clust.fcs, plots/FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable.png
+    shell:
+        Rscript "/data/scripts/process_fcs.R" -i "data/raw/FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable.fcs" -o "data/processed/FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable_umap_clust.fcs" -p "plots/FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable.png" -c "channels.txt"
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Sun Aug 10 09:11:53 2025]
+Error in rule process_fcs:
+    message: None
+    jobid: 4
+    input: data/raw/FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable.fcs, channels.txt
+    output: data/processed/FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable_umap_clust.fcs, plots/FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable.png
+    shell:
+        Rscript "/data/scripts/process_fcs.R" -i "data/raw/FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable.fcs" -o "data/processed/FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable_umap_clust.fcs" -p "plots/FR-FCM-Z3HK - TcellPanel - sarcoma - IPISRC-09 - Viable.png" -c "channels.txt"
+        (command exited with non-zero exit code)
+[Sun Aug 10 09:11:53 2025]
+Error in rule process_fcs:
+    message: None
+    jobid: 2
+    input: data/raw/FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable.fcs, channels.txt
+    output: data/processed/FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable_umap_clust.fcs, plots/FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable.png
+    shell:
+        Rscript "/data/scripts/process_fcs.R" -i "data/raw/FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable.fcs" -o "data/processed/FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable_umap_clust.fcs" -p "plots/FR-FCM-Z3HK - TcellPanel - kidney - IPIKID-076 - Viable.png" -c "channels.txt"
+        (command exited with non-zero exit code)
+Complete log(s): /data/.snakemake/log/2025-08-10T091149.209316.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.
