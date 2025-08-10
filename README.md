@@ -17,7 +17,7 @@ The pipeline relies on the `flowCore` R package for parsing FCS files.
 2) Modified snakemake file to create directories 
 3) Changed a command to run a container as: 
 ```
-docker run --rm -v $(pwd):/data -w /data fcs_pipeline_09081 --cores 2
+docker run --rm -v $(pwd):/data -w /data fcs_pipeline --cores 2
 ```
 4) Added snakefile rule all part
 5) Modified R script to accommodate channels from channels.txt.
@@ -66,16 +66,6 @@ docker build -t fcs_pipeline .
 Run the pipeline using the image:
 
 ```bash
-docker run --rm -v $(pwd):/data -w /pipeline fcs_pipeline --cores 4
+docker run --rm -v $(pwd):/data -w /data fcs_pipeline --cores 2
 ```
 
-## Tests
-
-Unit tests can be executed with `pytest`:
-
-```bash
-pytest
-```
-
-The tests use an example FCS file distributed with `flowCore` and verify that
-the pipeline completes and creates the expected outputs.
