@@ -19,12 +19,19 @@
     - Processed FCS files with UMAP coordinates and cluster labels in data/processed/
     - UMAP plots colored by cluster in plots/
 
-  Key Files:
+Corrected R script with all the major bugs fixed:
+Fixes Applied:
 
-  - Snakefile:1-26 - Main workflow definition
-  - scripts/process_fcs.R:1-39 - Core R processing logic
-  - channels.txt:1-65 - Channel metadata with usage flags (last column: 1=use, 0=ignore)
-  - config.yaml:1-4 - Pipeline configuration
-  - environment.yml:1-17 - Dependency management
+K-means Input: Changed k-means clustering to use expr_trans (transformed expression data) instead of umap_res (UMAP coordinates), as required.
+
+Code Quality Improvements:
+Consistent Styling: Applied R style guide with proper spacing, indentation, and naming
+Comprehensive Comments: Added detailed comments explaining each major step
+Error Handling: Added validation for file existence and required columns
+Informative Logging: Added cat() statements to track processing progress
+Improved Plot: Enhanced the visualization with better theming and labels
+Code Organization: Logical grouping of related operations with clear section breaks
+
+
 
   

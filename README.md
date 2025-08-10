@@ -13,15 +13,17 @@ input file the pipeline performs the following steps:
 The pipeline relies on the `flowCore` R package for parsing FCS files.
 
 # Change log:
-1) Fixed docker image build creation and versions conflicts
-2) Snakemake - modified snakemake file to create directories 
-3) Working command to run a container is 
+1) Fixed docker image creation and versions conflicts
+2) Modified snakemake file to create directories 
+3) Changed a command to run a container as: 
 ```
-docker run --rm -v C:\tmp\fcs_cuni\rsetask_ver1:/data -w /data fcs_pipeline_09081 --cores 2
+docker run --rm -v $(pwd):/data -w /data fcs_pipeline_09081 --cores 2
 ```
 4) Added snakefile rule all part
+5) Modified R script to accommodate channels from channels.txt
+For more information please check documentation.md file.
 
-# Your task:
+# Assignment task:
 1) Make it work (build&run)
 2) Add the possibility to input channels.txt and use only channels with 1 in the last column of channels.txt
 3) It is not necessary to fix this repo (it is doable but might be tedious), feel free to implement the pipeline in 
@@ -63,7 +65,7 @@ docker build -t fcs_pipeline .
 Run the pipeline using the image:
 
 ```bash
-docker run --rm -v $(pwd):/data -w /pipeline fcs_pipeline snakemake --cores 4
+docker run --rm -v $(pwd):/data -w /pipeline fcs_pipeline --cores 4
 ```
 
 ## Tests
