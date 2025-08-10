@@ -19,8 +19,8 @@
     - Processed FCS files with UMAP coordinates and cluster labels in data/processed/
     - UMAP plots colored by cluster in plots/
 
-Corrected R script with all the major bugs fixed:
-Fixes Applied:
+
+Corrected R script with fixes applied:
 
 K-means Input: Changed k-means clustering to use expr_trans (transformed expression data) instead of umap_res (UMAP coordinates), as required.
 
@@ -31,6 +31,7 @@ Error Handling: Added validation for file existence and required columns
 Informative Logging: Added cat() statements to track processing progress
 Improved Plot: Enhanced the visualization with better theming and labels
 Code Organization: Logical grouping of related operations with clear section breaks
+
 
 R script issues still exist - I had no time to dive deep and fix it:
 
