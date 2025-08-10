@@ -19,6 +19,7 @@ The pipeline relies on the `flowCore` R package for parsing FCS files.
 ```
 docker run --rm -v C:\tmp\fcs_cuni\rsetask_ver1:/data -w /data fcs_pipeline_09081 --cores 2
 ```
+4) Added snakefile rule all part
 
 # Your task:
 1) Make it work (build&run)
