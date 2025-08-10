@@ -20,7 +20,8 @@ The pipeline relies on the `flowCore` R package for parsing FCS files.
 docker run --rm -v $(pwd):/data -w /data fcs_pipeline_09081 --cores 2
 ```
 4) Added snakefile rule all part
-5) Modified R script to accommodate channels from channels.txt
+5) Modified R script to accommodate channels from channels.txt.
+
 For more information please check documentation.md file.
 
 # Assignment task:
