@@ -112,27 +112,6 @@ docker run --rm -v /path/to/your/project:/data -w /data fcs_pipeline --cores 2
 - `-w`: Working directory inside container
 - `--cores N`: Number of CPU cores to use
 
-## Current Limitations and Future Improvements
-
-### Known Issues
-- **R Script Dependencies**: Some R package dependencies may require updates for optimal compatibility with newer systems
-- **Large File Handling**: Very large FCS files (>1GB) may require memory optimizations
-- **Error Reporting**: R script error messages could be more descriptive for debugging
-
-### Planned Improvements
-- Enhanced error handling and reporting for R script execution
-- Support for additional clustering algorithms beyond UMAP
-- Automated quality control metrics generation
-- Integration with popular flow cytometry analysis frameworks
-- Performance optimizations for large datasets
-- Better handling of edge cases in FCS file formats
-
-### Contributing
-We welcome contributions to improve the pipeline! Areas where help is particularly appreciated:
-- R script optimization and error handling
-- Additional visualization options
-- Documentation improvements
-- Testing with diverse FCS file formats
 
 ## File Structure
 
