@@ -32,6 +32,8 @@ Informative Logging: Added cat() statements to track processing progress
 Improved Plot: Enhanced the visualization with better theming and labels
 Code Organization: Logical grouping of related operations with clear section breaks
 
+R script issues still exist - I had no time to dive deep and fix it:
+
 
 
   
